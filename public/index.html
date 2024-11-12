@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutoring Services</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Me</a></li>
+            <li><a href="#">Prices</a></li>
+        </ul>
+        <div class="auth-buttons">
+            <button id="sign-in-button">Sign In</button>
+            <button id="sign-up-button">Sign Up</button>
+        </div>
+    </nav>
+
+    <h1>Welcome to My Tutoring Services</h1>
+    <p>Offering private lessons in Math and Physics</p>
+
+    <!-- Sign-In Form -->
+    <div id="sign-in-form" style="display: none;">
+        <h2>Sign In</h2>
+        <form id="signInForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Sign In</button>
+        </form>
+    </div>
+
+    <!-- Sign-Up Form with Name, Username, Email, and Password Fields -->
+    <div id="sign-up-form" style="display: none;">
+        <h2>Sign Up</h2>
+        <form id="signUpForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="newUsername">Username:</label>
+            <input type="text" id="newUsername" name="newUsername" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="newPassword">Password:</label>
+            <input type="password" id="newPassword" name="newPassword" required>
+
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
