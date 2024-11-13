@@ -70,12 +70,12 @@ app.post('/api/signup', async (req, res) => {
 
     // Sign In route to authenticate an existing user
     app.post('/api/signin', async (req, res) => {
-        const { username, password } = req.body;
+        const { email, password } = req.body;
 
         try {
             // Query the database to find the user with the given username and password
-            const query = 'SELECT * FROM users WHERE username = $1 AND password = $2';
-            const result = await pool.query(query, [username, password]);
+            const query = 'SELECT * FROM users WHERE email = $1 AND password = $2';
+            const result = await pool.query(query, [email, password]);
 
             if (result.rows.length > 0) {
                 res.json({ message: 'User signed in successfully!', user: result.rows[0] });
@@ -88,7 +88,7 @@ app.post('/api/signup', async (req, res) => {
         }
     });
 
-    // Start the server
+   // Start the server
     app.listen(port, () => {
         console.log(`Server running on http://localhost:${port}`);
     });
