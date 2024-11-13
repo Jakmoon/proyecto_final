@@ -12,3 +12,5 @@ services:
       - .env
     ports:
       - "5432:5432"
+    volumes:
+      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql  #PostgreSQL Docker container automatically run SQL scripts to set up your database, but only if the script is in a specific location inside this container
