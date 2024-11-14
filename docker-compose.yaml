@@ -4,6 +4,10 @@ services:
     build: .
     ports:
       - "3000:3000"
+    volumes:
+      - .:/app                  # Sync host files with container
+      - /app/node_modules       # Prevent overwriting node_modules
+    command: npm run dev        # Use nodemon for development
     depends_on:
       - db
   db:
@@ -13,4 +17,4 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql  #PostgreSQL Docker container automatically run SQL scripts to set up your database, but only if the script is in a specific location inside this container
+      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql

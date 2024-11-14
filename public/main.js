@@ -73,4 +73,19 @@ document.addEventListener("DOMContentLoaded", () => {
             alert(error.message || "An error occurred. Please try again.");
         }
     });
+
+    // NEW: Smooth scrolling for internal links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function(event) {
+            event.preventDefault(); // Prevent default anchor behavior
+
+            const targetId = this.getAttribute("href").substring(1); // Get target section ID
+            const targetElement = document.getElementById(targetId); // Find the target element
+
+            if (targetElement) {
+                targetElement.scrollIntoView({ behavior: "smooth" }); // Smooth scroll to the element
+            }
+        });
+    });
 });
+

@@ -1,0 +1,117 @@
+/* General Page Styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #bab3b3;
+}
+
+/* Navbar Styling */
+nav {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-links a.active {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* Section Styling */
+.section {
+    position: relative;
+    height: 100vh; /* Full screen height */
+    display: flex;
+    align-items: center;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Section Box Styling */
+.section-box {
+    width: 60%; /* Box width */
+    height: 70%; /* Adjust height as needed */
+    background-color: inherit; /* Keep the background color for each section */
+    border: 8px solid black; /* Thick black border */
+    border-radius: 50px; /* Rounded edges */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optional shadow */
+}
+
+/* Align boxes per requirement */
+#background .section-box {
+    margin-left: 0%; /* Left-aligned */
+}
+
+#approach .section-box {
+    margin-left: auto; /* Push to the right */
+    margin-right: 0%; /* Right-aligned */
+}
+
+#philosophy .section-box {
+    margin-left: 0%; /* Left-aligned */
+}
+
+/* Header Styling */
+.section h1 {
+    position: absolute; /* Position the header outside the box */
+    font-size: 2.5rem;
+    margin: 0;
+    color: #333;
+}
+
+#background h1 {
+    left: 5%; /* Align header to the left */
+    top: 20%; /* Position slightly above the box */
+}
+
+#approach h1 {
+    right: 5%; /* Align header to the right */
+    top: 20%; /* Position slightly above the box */
+    text-align: right; /* Right-align the header text */
+}
+
+#philosophy h1 {
+    left: 5%; /* Align header to the left */
+    top: 20%; /* Position slightly above the box */
+}
+
+/* Section Background Colors */
+#background .section-box {
+    background-color: #add8e6; /* Light blue */
+}
+
+#approach .section-box {
+    background-color: #d3d3d3; /* Light grey */
+}
+
+#philosophy .section-box {
+    background-color: #f4cccc; /* Light red */
+}
+
+/* Content Styling */
+.section-box p {
+    font-size: 1.2rem;
+    color: #555;
+    text-align: center; /* Center the text within the box */
+}

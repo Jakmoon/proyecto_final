@@ -43,6 +43,11 @@
             res.status(500).send('Database query error');
         }
     });
+    // Route to aboutMe link
+    app.get('/aboutMe', (req, res) => {
+        res.sendFile(path.join(__dirname, 'public', 'aboutMe.html'));
+    });
+    
 
     // Sign Up route to create a new user
 // Sign Up route to create a new user
