@@ -2,7 +2,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #bab3b3;
+    background-color: #858282;
 }
 
 /* Navbar Styling */
@@ -50,7 +50,7 @@ nav {
     height: 70%; /* Adjust height as needed */
     background-color: inherit; /* Keep the background color for each section */
     border: 8px solid black; /* Thick black border */
-    border-radius: 50px; /* Rounded edges */
+    border-radius: 30px; /* Rounded edges */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -114,4 +114,30 @@ nav {
     font-size: 1.2rem;
     color: #555;
     text-align: center; /* Center the text within the box */
+}
+/*Image Style*/
+.circular_right_sided {
+    width: 400px; /* Fixed width */
+    height: 400px; /* Equal height for a circle */
+    border-radius: 50%; /* Circular shape */
+    border: 3px solid black; /* Optional border */
+    object-fit: cover; /* Ensure the image fills the circle */
+    margin-right: 100px; /* Space between box and image */
+    position: absolute; /* Allows precise positioning */
+    right: -2%; /* Adjust this value to push the image further to the right */
+    top: 50%; /* Center image vertically */
+    transform: translateY(-50%); /* Correct for vertical alignment */
+}
+
+.circular_left_sided {
+    width: 400px; /* Fixed width */
+    height: 400px; /* Equal height for a circle */
+    border-radius: 50%; /* Circular shape */
+    border: 3px solid black; /* Optional border */
+    object-fit: cover; /* Ensure the image fills the circle */
+    margin-right: 100px; /* Space between box and image */
+    position: absolute; /* Allows precise positioning */
+    left: 4%; /* Adjust this value to push the image further to the right */
+    top: 50%; /* Center image vertically */
+    transform: translateY(-50%); /* Correct for vertical alignment */
 }
