@@ -4,7 +4,8 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "dev": "nodemon app.js"
+    "dev": "nodemon app.js",
+    "sync": "browser-sync start --proxy 'http://localhost:3000' --files './**/*' --port 3002" 
   },
   "keywords": [],
   "author": "",

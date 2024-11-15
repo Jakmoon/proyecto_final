@@ -3,11 +3,12 @@ services:
   web:
     build: .
     ports:
-      - "3000:3000"
+      - "3000:3000" # Backend (Express server)
+      - "3002:3002" # BrowserSync
     volumes:
       - .:/app                  # Sync host files with container
       - /app/node_modules       # Prevent overwriting node_modules
-    command: npm run dev        # Use nodemon for development
+    command: sh -c "npm run dev & npm run sync" # Run both nodemon and BrowserSync - !!!!ADDED!!!!
     depends_on:
       - db
   db:

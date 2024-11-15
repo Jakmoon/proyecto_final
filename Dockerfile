@@ -10,11 +10,14 @@ COPY package*.json ./
 # Install dependencies
 RUN npm install
 
-# Copy the rest of the project files, including the public directory
+# Install BrowserSync globally
+RUN npm install -g browser-sync
+
+# Copy the rest of the project files
 COPY . .
 
-# Expose port 3000 to the host
-EXPOSE 3000
+# Expose ports
+EXPOSE 3000 3002
 
-# Start the app
-CMD ["npm", "start"] 
+# Start the app using the command specified in docker-compose
+CMD ["npm", "start"]
